@@ -1,0 +1,20 @@
+1. 5*2 6 slaves: 1:40.60
+   5*2 12 slaves: 1:34.36
+   4*3 12 slaves: 58:50.84
+
+2. 6 slaves: output file size = 24845750 B = 23.6948 MB
+   			   23.6948 / (60 + 40 ＋ 0.6) ＝ 0.2355 MB/s
+   12 slaves: output file size = 3776456323 B + 24845750 B = 3801302073 B = 3625.2032 MB
+   				3625.2032 / (60 + 40 + 0.6 + 58 * 60 + 50 + 0.84) = 1.0000 MB/s
+
+3. The speedup is only 6 seconds so the parallelizing is not so good since using 2 times of processors, the speed doesn’t increase much. It is a case of strong scaling because the total amount of work is fixed but we have different amount of processors.
+
+4. 24845750 B = 0.02314 GB
+   0.68 * 6 * 1 / 0.02314 = $176.32/GB
+   For 6 slaves,  output file size is 0.02314 GB. Though we only used the instances for less than 2 minutes, we still need to round up to an hour.
+   3801302073 B = 3.5402 GB
+   0.68 * 12 * 2 / 3.5402 = $4.6099/GB
+   For 12 slaves,  total output file size is 3.5402 GB. Though we used the instances for less than 2 hours, we still need to round up to two hours.
+
+5. We used 6 slaves for 7 hours and 12 slaves for 3 hours so in total, we used:
+   0.68 * 6 * 7 + 0.68 * 12 * 3 = $53.04

@@ -1,0 +1,17 @@
+    #
+    # TEST CASE 1
+    # YOUR TEST CASE GOES HERE
+    #
+
+    ADD $t0 $0 2
+    ADD $t1 $0 33
+    SL $t3 $t0 $t1
+    SL $t3 $t0 3
+    SR $t4 $t0 $t1
+    SR $t4 $t0 $
+    AND $t5 $t1 $t0
+    AND $t5 $t1 128
+    OR $t6 $t1 $t0
+    OR $t6 $t1 324
+    REV $t7 $t1 $t0
+    REV $t7 $t1 239

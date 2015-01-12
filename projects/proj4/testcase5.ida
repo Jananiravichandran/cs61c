@@ -1,0 +1,39 @@
+    #
+    # TEST CASE 5
+    # YOUR TEST CASE GOES HERE
+    #
+    ADD $t0 $0 10
+    ADD $t1 $0 5
+    J @GOTO
+    ADD $t1 $t0 5
+    GOTO:
+    SUB $jc $t1 $t0
+    JGT @GOTO2
+    ADD $jc $0 0
+    GOTO2:
+    JEQ @GOTO3
+    ADD $jc $0 1
+    GOTO3:
+    ADD $jc $0 -1
+    JLT @GOTO4
+    ADD $jc $0 3
+    GOTO4:
+    ADD $jc $0 0
+    JLE @GOTO5
+    ADD $jc $0 2
+    GOTO5:
+    ADD $jc $0 1
+    JNE @GOTO6
+    ADD $jc $0 2
+    GOTO6:
+    ADD $jc $0 2
+    JGE @GOTO7
+    ADD $jc $0 0
+    GOTO7:
+    JAL @GOTO8
+    J @exit
+    GOTO8:
+    J $ra
+    exit:
+    ADD $t0 $0 5
+

@@ -1,0 +1,8 @@
+    #
+    # TEST CASE 4
+    # YOUR TEST CASE GOES HERE
+    #
+
+    ADD $t0 $0 2
+    ADD $t1 $0 33
+    STU $t2 $t1 $t0

@@ -1,0 +1,18 @@
+    #
+    # TEST CASE 2
+    # YOUR TEST CASE GOES HERE
+    #
+
+    ADD $t0 $0 2
+    ADD $t1 $0 33
+    XOR $t2 $t1 $t0
+    XOR $t2 $t1 234
+    SUB $t3 $t0 $t1
+    SUB $t3 $t0 5
+    MUL $t4 $t1 $t0
+    MUL $t4 $t1 5
+    DIV $t5 $t1 $t0
+    DIV $t6 $t1 0
+    DIV $t1 $0 0
+    ADD $t1 $0 -3
+    DIV $t1 $t1 $0

@@ -1,0 +1,46 @@
+    #
+    # TEST CASE 3
+    # YOUR TEST CASE GOES HERE
+    #
+
+    ADD $t0 $0 $0
+    ADD $t1 $0 33
+
+    #sw odd
+    SH $t1 1($0)
+
+    #sw even
+    SH $t1 0($0)
+    
+    #LH odd
+    LH $t2 1($0)
+    
+    #LH even
+    LH $t3 0($0)
+
+    #LW even
+    LW $t3 0($0)
+    
+    #SH odd
+    SH $t2 3($0)
+    
+    #LW odd 
+    LW $t4 1($0)
+
+
+    ADD $t3 $t3 1000
+    
+    #SW odd
+    SW $t3 1($0)
+
+    #SW even
+    SW $t3 6($t0)
+
+    #LW even
+    LW $t2 4($t0)
+
+    ADD $t0 $0 0xffff
+    SL $t0 $t0 0x10
+    ADD $t1 $0 100
+    SW $t1 0($t0)
+    LW $t2 0($t0)

@@ -1,0 +1,3 @@
+1. It identifies the buildings in the background as close by. The contrast in the photo is not very big. The background is white and the sticky note is also white. The algorithm is hard to identify the white sticky note from the white background
+2. It works better. There is big color contrast in the pictures. The background is black. It is easier to identify the white sticky note from the black background.
+3. first, the word ¡°Cal¡± becomes blurry, because when the feature size increases, a lot of dots will has the same eulidean distance which means the algorithm will become less accurate. Second, the edges(black and white dots) of the images becomes bigger and bigger. Because of the increasing feature size, the dot on the edge cannot fit a feature inside the image. 

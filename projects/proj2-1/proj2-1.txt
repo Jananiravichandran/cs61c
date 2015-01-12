@@ -1,0 +1,6 @@
+Cheng Cui 61c-amb 
+Liuxiao Zhang 61c-akh
+
+1. Some permutations of the solution are impossible to reach.
+2. We start from the starting position and when we reach a solution (checked by the solution function) we put this solution as level zero into the set and set the level of other positions accordingly.
+3. For the loop free puzzles, we need make sure that we don’t go back to the last step. In order to do so, we need to store the parents of each position. In the two dictionaries, we need to store a tuple that contains, the position and the parent. In doing so, the memory we used will be doubled.
